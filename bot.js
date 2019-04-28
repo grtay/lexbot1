@@ -202,23 +202,6 @@ client.channels.get("572133388191006740").send(girisembed)
 });
 ///////////////////////////
 ///////////////////////
-client.on('message',msg=>{
-  console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
- 
-
-  if (msg.content.toLowerCase().match(/(!ban|!kilit|!reboot||!temizle|!uyar|!duyur||!yaz/g) && !msg.author.bot && msg.channel.type === "text" && msg.channel.permissionsFor(msg.guild.member(client.user)).has("MANAGE_MESSAGES")) {
-    if(msg.author.id!==ayarlar.sahip){
-      msg.delete(30).then(deletedMsg => {
-        msg.channel.bulkDelete(1);
-        deletedMsg.reply("Üzgünüm Dostum Sunucu Sahibi Değilsin!").catch(e => {
-          console.error(e);
-        });
-      }).catch(e => {
-        console.error(e);
-      });
-    }
-  }
-});
 
 ////////////////////////
 client.on("guildMemberAdd", member => {
