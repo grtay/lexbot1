@@ -209,10 +209,10 @@ client.on("guildMemberAdd", member => {
   var channel = member.guild.channels.find("id", "486331552968736769");
   if (!channel) return channel.send('#giriş-çıkış Bulamıyorum 😕');
 
-var role = member.guild.roles.find("id", "575033857133248513");
+var role = member.guild.roles.find("name", "Üye");
 if (!role) return channel.send('@Üye Rolünü Bulamıyorum 😕');
 
-var role1 = member.guild.roles.find("id", "575034107747106829");
+var role1 = member.guild.roles.find("name", "Oyunlar");
 if (!role1) return channel.send('@Oyunlar Rolünü Bulamıyorum 😕');
 
   member.addRole(role);
